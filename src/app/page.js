@@ -71,7 +71,7 @@ export default function Home() {
       <header className="site-header">
         <a className="wordmark" href="#" aria-label="ICE T home"><span>ICE</span><b>T.</b><small>BARBERSHOP</small></a>
         <nav className="desktop-nav" aria-label="Main navigation">
-          <a href="#story">THE EXPERIENCE</a><a href="/team">MEET THE TEAM</a><a href="#services">SERVICES</a><a href="#prices">PRICES</a><a href="#work">GALLERY</a><a href="#visit">FIND US</a>
+          <a href="#story">THE EXPERIENCE</a><a href="/team">MEET THE TEAM</a><a href="#services">SERVICES</a><a href="#prices">PRICES</a><a href="#work">GALLERY</a><a href="#voices">CUSTOMER VOICES</a><a href="#visit">FIND US</a>
         </nav>
         <BookingLink className="header-booking">BOOK YOUR CHAIR <ArrowUpRight size={15} /></BookingLink>
         <button className="menu-toggle" type="button" onClick={() => setMenuOpen(!menuOpen)} aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"} aria-expanded={menuOpen} aria-controls="mobile-navigation">{menuOpen ? <X size={23} /> : <Menu size={23} />}</button>
@@ -79,7 +79,7 @@ export default function Home() {
 
       <AnimatePresence>
         {menuOpen && <motion.nav id="mobile-navigation" className="mobile-menu" initial={{ opacity: 0, y: -12 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -12 }} aria-label="Mobile navigation">
-          {[["THE EXPERIENCE", "#story"], ["MEET THE TEAM", "/team"], ["SERVICES", "#services"], ["PRICES", "#prices"], ["GALLERY", "#work"], ["FIND US", "#visit"]].map(([label, href]) => <a key={href} href={href} onClick={closeMenu}>{label}<ArrowUpRight size={18} /></a>)}
+          {[["THE EXPERIENCE", "#story"], ["MEET THE TEAM", "/team"], ["SERVICES", "#services"], ["PRICES", "#prices"], ["GALLERY", "#work"], ["CUSTOMER VOICES", "#voices"], ["FIND US", "#visit"]].map(([label, href]) => <a key={href} href={href} onClick={closeMenu}>{label}<ArrowUpRight size={18} /></a>)}
           <BookingLink className="button button-light" />
         </motion.nav>}
       </AnimatePresence>
@@ -141,6 +141,22 @@ export default function Home() {
 
       <section className="statement"><div className="statement-inner"><span className="eyebrow">THE ICE T STANDARD</span><p>CONFIDENCE IS<br />A <em>GOOD LOOK.</em></p><span className="statement-mark">✳</span></div></section>
 
+      <section className="voices section-pad" id="voices">
+        <div className="section-kicker"><span>05 / CUSTOMER VOICES</span><span>THE ICE T STANDARD</span></div>
+        <div className="voices-heading">
+          <div><p className="eyebrow">GOOD WORDS. REAL PEOPLE.</p><h2>THE <em>ICE-T</em><br />STANDARD.</h2></div>
+          <a className="voices-add" href="https://wa.me/263775897664?text=Hello%20ICE%20T%2C%20I%E2%80%99d%20like%20to%20share%20a%20review%20of%20my%20experience." target="_blank" rel="noreferrer">ADD YOUR REVIEW <ArrowUpRight size={15} /></a>
+        </div>
+        <div className="voices-grid">
+          <article className="voice-card"><span className="voice-initial">W</span><div><h3>Willie</h3><p>“Best barber in Vic Falls. Make sure you try this one. You won't be disappointed.”</p></div></article>
+          <article className="voice-card"><span className="voice-initial">C</span><div><h3>Craig</h3><p>“Precision at its finest. Best fade in the city, hands down.”</p></div></article>
+          <article className="voice-card"><span className="voice-initial">L</span><div><h3>Lionel</h3><p>“The most professional barber in the country.”</p></div></article>
+          <article className="voice-card"><span className="voice-initial">S</span><div><h3>Shawn</h3><p>“Clean shop, professional staff. Beard sculpt was exactly what I asked for.”</p></div></article>
+          <article className="voice-card"><span className="voice-initial">T</span><div><h3>Takudzwa</h3><p>“Ice T Urichibaba 🔥”</p></div></article>
+          <article className="voice-card"><span className="voice-initial">B</span><div><h3>Benon Marava</h3><p>“The only barber I trust in town so far, he can even trim my hair while I'm sleeping then I just wake up smart 🔥”</p></div></article>
+        </div>
+      </section>
+
       <section className="work section-pad" id="work">
         <div className="section-kicker"><span>04 / THE GALLERY</span><span>MADE WITH INTENTION</span></div>
         <div className="work-heading"><h2>FRESH CUTS.<br /><em>REAL CHARACTER.</em></h2><p>Every detail has a purpose. Every finish tells a story. This is the craft behind the chair.</p></div>
@@ -157,6 +173,10 @@ export default function Home() {
         <div className="visit-grid"><div><p className="eyebrow">GOOD PEOPLE. GREAT GROOMING.</p><h2>SEE YOU<br /><em>IN THE CHAIR.</em></h2><p className="visit-copy">A great cut starts with a conversation. Get in touch with the team and let’s find a time that works for you.</p><BookingLink>START A CONVERSATION</BookingLink></div>
           <div className="visit-card"><div className="visit-card-top"><span>ICE T BARBERSHOP</span><Scissors size={20} /></div><div className="visit-card-main"><span className="eyebrow">OPENING HOURS</span><div className="hours-row"><span>MONDAY — THURSDAY</span><b>08:00 — 18:00</b></div><div className="hours-row"><span>FRIDAY — SATURDAY</span><b>08:00 — 19:00</b></div><div className="hours-row"><span>SUNDAY</span><b>09:00 — 19:00</b></div><p className="hours-note">Listed hours · 136 NRZ Lawley Road, Landela Complex, Victoria Falls.</p></div><div className="visit-card-bottom"><MapPin size={15} /><span>136 NRZ Lawley Road · Landela Complex · Victoria Falls</span></div></div>
         </div>
+        <div className="location-map">
+          <div className="map-heading"><span className="eyebrow">FIND YOUR WAY</span><a href="https://www.google.com/maps/search/?api=1&query=ICE+T+Barbershop%2C+136+NRZ+Lawley+Road%2C+Landela+Complex%2C+Victoria+Falls%2C+Zimbabwe" target="_blank" rel="noreferrer">OPEN IN GOOGLE MAPS <ArrowUpRight size={14} /></a></div>
+          <iframe title="Map showing ICE T Barbershop in Victoria Falls" src="https://maps.google.com/maps?q=ICE%20T%20Barbershop%2C%20136%20NRZ%20Lawley%20Road%2C%20Landela%20Complex%2C%20Victoria%20Falls%2C%20Zimbabwe&t=&z=15&ie=UTF8&iwloc=&output=embed" loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
+        </div>
       </section>
 
       <section className="contact section-pad" id="contact">
@@ -166,7 +186,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="footer"><a className="wordmark footer-logo" href="#"><span>ICE</span><b>T.</b><small>BARBERSHOP</small></a><p>WHERE EVERY CUT IS A PIECE OF ART.</p><div className="footer-links"><a href="/team">MEET THE TEAM</a><a href="#services">SERVICES</a><a href="#prices">PRICES</a><a href="#work">GALLERY</a><a href="#contact">CONTACT</a></div><span className="copyright">© ICE T BARBERSHOP · ZIMBABWE</span></footer>
+      <footer className="footer"><a className="wordmark footer-logo" href="#"><span>ICE</span><b>T.</b><small>BARBERSHOP</small></a><p>WHERE EVERY CUT IS A PIECE OF ART.</p><div className="footer-links"><a href="/team">MEET THE TEAM</a><a href="#services">SERVICES</a><a href="#prices">PRICES</a><a href="#work">GALLERY</a><a href="#voices">CUSTOMER VOICES</a><a href="#contact">CONTACT</a></div><span className="copyright">© ICE T BARBERSHOP · ZIMBABWE</span></footer>
     </main>
   );
 }

@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowDownRight, ArrowUpRight, Menu, X, Scissors } from "lucide-react";
 
-const links = [["THE EXPERIENCE","/#story"],["MEET THE TEAM","/team"],["SERVICES","/#services"],["PRICES","/#prices"],["GALLERY","/#work"],["FIND US","/#visit"]];
+const links = [["THE EXPERIENCE","/#story"],["MEET THE TEAM","/team"],["SERVICES","/#services"],["PRICES","/#prices"],["GALLERY","/#work"],["CUSTOMER VOICES","/#voices"],["FIND US","/#visit"]];
 
 export default function TeamPage() {
   const [menuOpen,setMenuOpen]=useState(false);
